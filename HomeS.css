@@ -4,6 +4,64 @@ background-image: radial-gradient(#d1cdc7 1px, transparent 1px);
 background-size: 20px 20px;
 }
 
+#LDmode{
+    position: relative;
+    align-items: center;
+    background: transparent;
+    justify-content: center;
+    display: flex;
+    width: 85px;
+    height: 40px;
+    border: #ad9e93 solid 2px;
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    gap: 15px;
+    padding:0px;
+    background: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#circle {
+    position: absolute; 
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent; 
+    border: 1.5px solid rgba(173, 158, 147, 0.4); 
+    box-shadow: 0 0 8px rgba(173, 158, 147, 0.2); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    z-index: 1; 
+}
+
+
+#LDmode.dark-active #circle {
+    left: 46px; 
+    border-color:solid rgba(173, 158, 147, 0.4); 
+    box-shadow: 0 0 10px rgba(253, 250, 247, 0.2); 
+}
+
+body.dark-mode {
+    background-color: #2b2724;
+    background-image: radial-gradient(#4a4440 1px, transparent 1px);
+}
+
+body.dark-mode .aboutC {
+    background-color: #3d3733; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .aboutC h1 { color: #fdfaf7; }
+body.dark-mode .aboutC h2, 
+body.dark-mode .aboutC p { color: #ad9e93; }
+
+#LDmode.dark-active #circle {
+    left: 45px; 
+    background-color: #fdfaf7;
+}
+
 .PK{
     display: flex;
     flex-direction: row;
@@ -51,6 +109,12 @@ background-size: 20px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
     cursor: pointer;
+}
+
+#LDmode img{
+    width: 25px;
+    height: auto;
+    z-index: 2;
 }
 
 #skills img, #project img, #contact img{
